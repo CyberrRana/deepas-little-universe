@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" role="img" aria-label="Decorative placeholder for photo 4">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="0" x2="820" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff9e8"/><stop offset="0.52" stop-color="#ffe9f1"/><stop offset="1" stop-color="#e8e0ff"/>
+    </linearGradient>
+    <linearGradient id="heart" x1="300" y1="360" x2="620" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/><stop offset="0.42" stop-color="#ff8fc0"/><stop offset="1" stop-color="#c98a2e"/>
+    </linearGradient>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="52"/>
+    </filter>
+    <filter id="softshadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#c98a2e" flood-opacity="0.26"/>
+    </filter>
+    <radialGradient id="gloss" cx="0.32" cy="0.24" r="0.7">
+      <stop stop-color="#ffffff" stop-opacity="0.95"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <circle cx="760" cy="1010" r="250" fill="#f7c948" opacity="0.34" filter="url(#blur)"/>
+  <circle cx="150" cy="220" r="190" fill="#ff8fc0" opacity="0.28" filter="url(#blur)"/>
+  <circle cx="820" cy="180" r="120" fill="#ffffff" opacity="0.5" filter="url(#blur)"/>
+
+  <g transform="rotate(-4 450 620)" filter="url(#softshadow)">
+    <rect x="152" y="268" width="596" height="716" rx="46" fill="#fffdfa" opacity="0.72"/>
+    <rect x="186" y="302" width="528" height="648" rx="30" fill="none" stroke="#c98a2e" stroke-opacity="0.22" stroke-width="3" stroke-dasharray="14 12"/>
+  </g>
+
+  <g>
+    <ellipse cx="450" cy="878" rx="180" ry="34" fill="#c98a2e" opacity="0.14"/>
+    <path d="M450 792 C 344 704 276 650 276 572 C 276 502 332 458 394 458 C 429 458 445 476 450 498 C 455 476 471 458 506 458 C 568 458 624 502 624 572 C 624 650 556 704 450 792 Z" fill="url(#heart)"/>
+    <path d="M450 792 C 344 704 276 650 276 572 C 276 502 332 458 394 458 C 429 458 445 476 450 498 C 455 476 471 458 506 458 C 568 458 624 502 624 572 C 624 650 556 704 450 792 Z" fill="url(#gloss)" opacity="0.55"/>
+    <ellipse cx="380" cy="536" rx="52" ry="34" fill="#ffffff" opacity="0.5" transform="rotate(-28 380 536)"/>
+  </g>
+
+  <path d="M0 -1 C .06 -.44 .44 -.06 1 0 C .44 .06 .06 .44 0 1 C -.06 .44 -.44 .06 -1 0 C -.44 -.06 -.06 -.44 0 -1 Z" transform="translate(212 218) scale(30)" fill="#ffffff" opacity="0.95"/>
+  <path d="M0 -1 C .06 -.44 .44 -.06 1 0 C .44 .06 .06 .44 0 1 C -.06 .44 -.44 .06 -1 0 C -.44 -.06 -.06 -.44 0 -1 Z" transform="translate(700 300) scale(22)" fill="#ff8fc0" opacity="0.9"/>
+  <path d="M0 -1 C .06 -.44 .44 -.06 1 0 C .44 .06 .06 .44 0 1 C -.06 .44 -.44 .06 -1 0 C -.44 -.06 -.06 -.44 0 -1 Z" transform="translate(742 862) scale(26)" fill="#ffffff" opacity="0.85"/>
+  <path d="M0 -1 C .06 -.44 .44 -.06 1 0 C .44 .06 .06 .44 0 1 C -.06 .44 -.44 .06 -1 0 C -.44 -.06 -.06 -.44 0 -1 Z" transform="translate(158 742) scale(18)" fill="#f7c948" opacity="0.85"/>
+  <path d="M0 -1 C .06 -.44 .44 -.06 1 0 C .44 .06 .06 .44 0 1 C -.06 .44 -.44 .06 -1 0 C -.44 -.06 -.06 -.44 0 -1 Z" transform="translate(628 158) scale(16)" fill="#c98a2e" opacity="0.35"/>
+
+  <text x="118" y="176" font-family="Outfit, Segoe UI, Helvetica, Arial, sans-serif" font-size="104" font-weight="800" fill="#ffffff" opacity="0.85" letter-spacing="4">04</text>
+  <text x="450" y="1092" text-anchor="middle" font-family="Outfit, Segoe UI, Helvetica, Arial, sans-serif" font-size="27" font-weight="600" fill="#c98a2e" fill-opacity="0.62" letter-spacing="9">A LITTLE MEMORY</text>
+  <text x="450" y="1144" text-anchor="middle" font-family="Caveat, Segoe Script, Bradley Hand, cursive" font-size="42" fill="#c98a2e" fill-opacity="0.75">goes right here</text>
+</svg>
