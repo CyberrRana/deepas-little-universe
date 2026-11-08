@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      source_url:
+        description: Optional URL of a zip with updated project files
+        required: false
 
 permissions:
   contents: write
@@ -24,17 +28,21 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pull in the project source
-        if: ${{ !hashFiles('package.json') }}
+        if: ${{ !hashFiles('package.json') || inputs.source_url != '' }}
+        env:
+          SOURCE_URL: ${{ inputs.source_url }}
         run: |
           set -euo pipefail
-          curl -fsSL --retry 3 --retry-delay 2 -o /tmp/source.zip "https://litter.catbox.moe/e1jar2.zip"
+          url="${SOURCE_URL:-https://litter.catbox.moe/e1jar2.zip}"
+          curl -fsSL --retry 3 --retry-delay 2 -o /tmp/source.zip "$url"
+          rm -rf /tmp/source
           unzip -q /tmp/source.zip -d /tmp/source
           rsync -a --exclude '.github' /tmp/source/deepas-little-universe/ ./
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Add Deepa's Little Universe project source"
-          git push
+          git commit -m "Update project source" || echo "No changes to commit"
+          git push || echo "Nothing to push"
 
       - uses: actions/setup-node@v4
         with:
